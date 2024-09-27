@@ -1,63 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <!-- External Stylesheet -->
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
 </head>
 
 <body>
 
-    <div class="header">
+    <!-- Header Section -->
+    <header class="header">
         <img src="istanbul.jpg" alt="Panoramic view of Istanbul" class="header-img">
         <div class="header-text">
-            <h1>Visit Istanbul</h1>
+            <h1 id="main-title">Visit Istanbul</h1>
             <p>Discover the rich culture, history, and vibrant life of this amazing city.</p>
+            <button class="styled-button" onclick="changeTitle()">Change Title</button>
         </div>
-    </div>
+    </header>
 
     <!-- Activities Section -->
-    <div class="activities">
+    <section class="activities">
         <h2>Explore Istanbul's Iconic Landmarks</h2>
         <div class="activity-container">
-            <div class="places">
-                <a href="https://en.wikipedia.org/wiki/Hagia_Sophia" target="_blank">
-                    <img src="hagia-sophia.jpg" alt="Hagia Sophia">
-                </a>
+
+            <!-- Hagia Sophia Carousel -->
+            <article class="landmark" id="hagia-sophia">
+                <div class="carousel">
+                    <button class="prev" onclick="prevImage(0)">&#10094;</button>
+                    <a href="https://en.wikipedia.org/wiki/Hagia_Sophia" target="_blank">
+                        <img id="carousel-img-0" src="hagia-sophia.jpg" alt="Hagia Sophia">
+                    </a>
+                    <button class="next" onclick="nextImage(0)">&#10095;</button>
+                </div>
                 <h3>Experience the Splendor of Hagia Sophia</h3>
                 <p>Step inside one of the world’s greatest architectural marvels. Hagia Sophia has stood the test of
                     time, serving as a church, a mosque, and now a museum that holds centuries of history and cultural
                     fusion.</p>
-            </div>
-            <div class="places">
-                <a href="https://en.wikipedia.org/wiki/Maiden%27s_Tower" target="_blank">
-                    <img src=" maidens-tower.jpg" alt="Maiden's Tower">
-                </a>
+            </article>
+
+            <!-- Maiden's Tower Carousel -->
+            <article class="landmark" id="maidens-tower">
+                <div class="carousel">
+                    <button class="prev" onclick="prevImage(1)">&#10094;</button>
+                    <a href="https://en.wikipedia.org/wiki/Maiden%27s_Tower" target="_blank">
+                        <img id="carousel-img-1" src="maidens-tower.jpg" alt="Maiden's Tower">
+                    </a>
+                    <button class="next" onclick="nextImage(1)">&#10095;</button>
+                </div>
                 <h3>Experience the Romance of Maiden's Tower</h3>
                 <p>Sail to the Maiden’s Tower, a legendary structure that has guarded the Bosphorus for centuries. From
                     this romantic spot, enjoy panoramic views of Istanbul where East truly meets West.</p>
-            </div>
-            <div class="places">
-                <a href="https://en.wikipedia.org/wiki/Galata" target="_blank">
-                    <img src="galata.jpg" alt="Galata Tower">
-                </a>
-                <h3>Experience the magnificent Galata Tower </h3>
+            </article>
+
+            <!-- Galata Tower Carousel -->
+            <article class="landmark" id="galata-tower">
+                <div class="carousel">
+                    <button class="prev" onclick="prevImage(2)">&#10094;</button>
+                    <a href="https://en.wikipedia.org/wiki/Galata" target="_blank">
+                        <img id="carousel-img-2" src="galata.jpg" alt="Galata Tower">
+                    </a>
+                    <button class="next" onclick="nextImage(2)">&#10095;</button>
+                </div>
+                <h3>Experience the magnificent Galata Tower</h3>
                 <p>Ascend the historic Galata Tower and experience a breathtaking 360-degree view of Istanbul’s skyline,
                     where ancient landmarks blend seamlessly with the modern cityscape.</p>
-            </div>
+            </article>
+
         </div>
-    </div>
+    </section>
 
     <!-- Guide Section -->
-    <div class="guide">
+    <section class="guide">
         <img src="fatma.png" alt="Your guide">
         <div class="guide-info">
             <h3>Your guide</h3>
-            <p>“I have lived in Istanbul for over 26 years and I can show you all of its hidden gems and best places to
-                visit.”</p>
-            <p><strong>Fatma Arslantas</stong>
-            </p>
+            <p>“I have lived in Istanbul for over 26 years and I can show you all its hidden gems...”</p>
+            <p><strong>Fatma Arslantas</strong></p>
         </div>
-    </div>
+    </section>
 
 </body>
 
