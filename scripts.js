@@ -13,10 +13,7 @@ const images = [
 let currentIndices = [0, 0, 0];
 
 function nextImage(carouselIndex) {
-    currentIndices[carouselIndex]++;
-    if (currentIndices[carouselIndex] >= images[carouselIndex].length) {
-        currentIndices[carouselIndex] = 0;
-    }
+    currentIndices[carouselIndex] = (currentIndices[carouselIndex] + 1) % images[carouselIndex].length
     updateCarouselImage(carouselIndex);
 }
 
